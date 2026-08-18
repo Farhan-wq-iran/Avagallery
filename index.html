@@ -1583,4 +1583,39 @@ function closeModal(id){
 ========================= */
 
 document
-    .que
+    .querySelectorAll(".modal")
+    .forEach(
+        modal => {
+
+            modal.addEventListener(
+                "click",
+                e => {
+
+                    if(
+                        e.target === modal
+                    ){
+
+                        modal
+                            .classList
+                            .remove("show");
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+/* =========================
+   اجرای اولیه
+========================= */
+
+renderProducts(products);
+
+</script>
+
+</body>
+
+</html>
