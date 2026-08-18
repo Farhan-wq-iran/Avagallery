@@ -1374,4 +1374,40 @@ document
         updateCart();
 
         document
-        .getEleme
+        .getElementById("cartModal")
+        .classList.add("show");
+
+    }
+);
+
+
+/* بستن با کلیک بیرون */
+
+document
+.querySelectorAll(".modal")
+.forEach(modal=>{
+
+    modal.addEventListener(
+        "click",
+        e=>{
+
+            if(e.target===modal){
+
+                modal.classList.remove("show");
+
+            }
+
+        }
+    );
+
+});
+
+
+/* اجرای اولیه */
+
+renderProducts(products);
+
+</script>
+
+</body>
+</html>
