@@ -1283,7 +1283,7 @@ function completeOrder(){
 
 
     alert(
-        "🎉 سفارش شما با موفقیت ثبت شد!\n\nاین نسخه نمایشی است و پرداخت واقعی ندارد."
+        "🎉 سفارش شما با موفقیت ثبت شد!\n\n جهت خرید به این شماره مراجعه کنید 09177196027."
     );
 
 
@@ -1374,5 +1374,40 @@ document
         updateCart();
 
         document
-        .getEleme
-    
+        .getElementById("cartModal")
+        .classList.add("show");
+
+    }
+);
+
+
+/* بستن با کلیک بیرون */
+
+document
+.querySelectorAll(".modal")
+.forEach(modal=>{
+
+    modal.addEventListener(
+        "click",
+        e=>{
+
+            if(e.target===modal){
+
+                modal.classList.remove("show");
+
+            }
+
+        }
+    );
+
+});
+
+
+/* اجرای اولیه */
+
+renderProducts(products);
+
+</script>
+
+</body>
+</html>
